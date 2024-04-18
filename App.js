@@ -46,7 +46,7 @@ app.use(express.json());
     sessionOptions.cookie = {
       sameSite: "none",
       secure: true,
-      domain:  "kanbas-node-server-app.onrender.com",
+      domain:  "https://kanbas-node-server-app-a6-oshm.onrender.com",
     };
   }
   app.use(session(sessionOptions));
