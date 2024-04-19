@@ -7,7 +7,18 @@ export const findCourseById = (id) => courseModel.findOne({ id: id });
 export const findCoursesByDepartment = (department) =>
     courseModel.find({ department });
 
-export const createCourse = (course) => courseModel.create(course);
+// export const createCourse = (course) => courseModel.create(course);
+
+export const createCourse = (course) => {
+    // course.id = course._id
+    
+    
+    delete course._id
+
+
+    return courseModel.create(course);
+}
+
 
 export const updateCourse = (id, course) =>
     courseModel.updateOne({ _id: id }, { $set: course });

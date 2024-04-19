@@ -69,6 +69,7 @@ export default function CourseRoutes(app) {
 
     const createCourse = async (req, res) => {
         const newCourse = await dao.createCourse(req.body);
+        
         res.json(newCourse);
     };
 
